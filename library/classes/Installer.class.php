@@ -29,7 +29,7 @@ class Installer
         $this->igroup                   = isset($cgi_variables['igroup']) ? ($cgi_variables['igroup']) : '';
         $this->i2faEnable               = isset($cgi_variables['i2faenable']) ? ($cgi_variables['i2faenable']) : '';
         $this->i2faSecret               = isset($cgi_variables['i2fasecret']) ? ($cgi_variables['i2fasecret']) : '';
-        $this->server                   = isset($cgi_variables['server']) ? ($cgi_variables['server']) : '127.0.0.1'; // mysql server (usually localhost)
+        $this->server                   = isset($cgi_variables['server']) ? ($cgi_variables['server']) : ''; // mysql server (usually localhost)
         $this->loginhost                = isset($cgi_variables['loginhost']) ? ($cgi_variables['loginhost']) : ''; // php/apache server (usually localhost)
         $this->port                     = isset($cgi_variables['port']) ? ($cgi_variables['port']): '';
         $this->root                     = isset($cgi_variables['root']) ? ($cgi_variables['root']) : '';
