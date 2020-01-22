@@ -9,11 +9,12 @@ services:
   mysql:
     restart: always
     image: mariadb:10.4
-    command: ['mysqld','--character-set-server=utf8']
+    command: ["mysqld","--character-set-server=utf8"]
     ports:
     - 8320:3306
     volumes:
-    - databasevolume:/var/lib/mysql
+      - ./db.conf:/etc/mysql/mariadb.conf.d
+      - databasevolume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
   openemr:
