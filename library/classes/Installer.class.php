@@ -692,7 +692,7 @@ if ($it_died != 0) {
     private function connect_to_database($server, $user, $password, $port, $dbname = '')
     {
         if ($server == "localhost") {
-            $dbh = mysqli_connect($server, $user, $password, $dbname);
+            $dbh = mysqli_connect("127.0.0.1", $user, $password, $dbname);
         } else {
             $dbh = mysqli_connect($server, $user, $password, $dbname, $port);
         }
